@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,17 +37,20 @@ public class PlayerController : MonoBehaviour
             if (horizontalInput > 0)
             {
                 playerRenderer.flipX = true;
-            } else
+            }
+            else
             {
                 playerRenderer.flipX = false;
             }
-        } else if (verticalInput > 0 && horizontalInput == 0)
+        }
+        else if (verticalInput > 0 && horizontalInput == 0)
         {
             animator.SetBool("Idle_Left", false);
             animator.SetBool("Idle", false);
             animator.SetBool("Idle_Back", true);
 
-        } else
+        }
+        else
         {
             animator.SetBool("Idle_Left", false);
             animator.SetBool("Idle", true);
